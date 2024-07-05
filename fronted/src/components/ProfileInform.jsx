@@ -3,22 +3,10 @@ import { RiGitRepositoryFill, RiUserFollowFill, RiUserFollowLine } from "react-i
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiThought } from "react-icons/tfi";
 import { FaEye } from "react-icons/fa";
+import LikedProfile from "./LikeProfile"
 
 const ProfileInfo = ({userProfile}) => {
-	// const userProfile = {
-	// 	avatar_url: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745",
-	// 	bio: "👨🏻‍💻👨🏻‍💻👨🏻‍💻",
-	// 	email: "johndoe@gmail.com",
-	// 	followers: 100,
-	// 	following: 200,
-	// 	html_url: "https://github.com/burakorkmez",
-	// 	location: "Somewhere, Earth",
-	// 	name: "John Doe",
-	// 	public_gists: 100,
-	// 	public_repos: 100,
-	// 	twitter_username: "johndoe",
-	// 	login: "johndoe",
-	// };
+	
     console.log(userProfile);
 
 	return (
@@ -31,6 +19,7 @@ const ProfileInfo = ({userProfile}) => {
 					</a>
 					{/* View on Github */}
 					<div className='flex gap-2 items-center flex-col'>
+					<LikedProfile userProfile={userProfile} />
                     {userProfile ? (
                 <>
                     <p>Name: {userProfile.name}</p>
